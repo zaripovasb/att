@@ -2,7 +2,7 @@ Rails.application.routes.draw do
  root "pages#index"
  get '/about', to:"pages#about"
  get '/contact', to:"pages#contact"
- resourses :users
+resources :users
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
