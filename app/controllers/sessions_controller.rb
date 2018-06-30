@@ -4,28 +4,26 @@ def new
 end 
 
 def create
+  login = params[:session][:login]
+    if login.include? "@"
+      user = User.find_by_email(login)
+    else
+      user = User.find_by_username(login)
+    end
+
+    if user && user.authenticate(params[:session][:password])
+      sign_in user
+      redirect_to user
+    else
+      flash[:danger] = "Invalid username or password"
+      render "new"
+    end
 end
 
 def destroy 
+  sign_out
+  redirect_to root_path
 end 
 
 end
-<% provide(:title, "Log in") %>
-<h1>Log in</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>
