@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
 	before_action set_study_place
 
 	create
-	
+
 	private
 	
 
@@ -14,5 +14,6 @@ class LocationsController < ApplicationController
 
 	def set_study_place
 		@study_place = LatLng.new()
+	end
 end
 
