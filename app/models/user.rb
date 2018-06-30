@@ -2,7 +2,7 @@ class User < ApplicationRecord
 
 	has_secure_password
 	
-	validates_presence_of :email, :username, :name, :surname
+	validates_presence_of :email, :username, :first_name, :surname
 	validates_uniqueness_of :email, :username
 		validates :password, length: {minimum: 6, maximum: 30}
 	validates_email_format_of :email, message: 'The e-mail format is not correct!'

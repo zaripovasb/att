@@ -2,6 +2,8 @@ class LocationsController < ApplicationController
 	before_action get_user_location
 	before_action set_study_place
 
+	create
+	
 	private
 	
 
