@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_30_163856) do
+ActiveRecord::Schema.define(version: 2018_06_30_185332) do
 
   create_table "locations", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2018_06_30_163856) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_teacher", default: false
+    t.string "name"
+    t.string "surname"
   end
 
 end
