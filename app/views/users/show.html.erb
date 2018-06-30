@@ -1,5 +1,5 @@
-<h1>Hello <%=current_user.surname current_user.first_name%></h1>
-<%#get_user_location%>
+<h1>Hello <%=current_user.username%></h1>
+<%=get_user_ip%>
 <%if current_user.is_teacher%>
 teacher
 <%else%>
