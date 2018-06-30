@@ -1,19 +1,19 @@
 class LocationsController < ApplicationController
-	before_action get_user_location
-	before_action set_study_place
+	# before_action get_user_location
+	# before_action set_study_place
 
-	create
+	# create
 
-	private
+	# private
 	
 
-	def get_user_location
-		@remote_ip = request.remote_ip
-		@user_location = LatLng.create(params[:lat], params[:lang])
-	end
+	# def get_user_location
+	# 	@remote_ip = request.remote_ip
+	# 	@user_location = LatLng.create(params[:lat], params[:lang])
+	# end
 
-	def set_study_place
-		@study_place = LatLng.new()
-	end
+	# def set_study_place
+	# 	@study_place = LatLng.new()
+	# end
 end
 
