@@ -8,8 +8,23 @@
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp6Z8A6B-OgZS4_yj49s0Gl0AfWwnefFlMweYUyPstmT1_2Ju_jQ");
+  margin: auto;
+  background-repeat: initial;
 }
+
+  .button {
+    padding: 10px 65px;
+    cursor: pointer;
+    text-align: center;
+    color:#fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 9px #999;   
+    width:33%;
+  }
 
 section {
   overflow: auto;
@@ -20,6 +35,11 @@ textarea {
 }
 
 .center {
+  text-align: center;
+}
+
+.hack {
+  height: 300px;
   text-align: center;
 }
 

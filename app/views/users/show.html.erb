@@ -1,13 +1,33 @@
+<style>
+	  .button {
+    padding: 10px 45px;
+    cursor: pointer;
+    text-align: center;
+    color:#fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 9px #999;   
+    width:33%;
+    margin: auto;
+  }
+
+</style>
+
 <h1>Hello <%=current_user.username%></h1>
-<%=get_user_ip%>
-<%=get_user_location%>
+
+
 <%if current_user.is_teacher%>
 teacher
 <%else%>
-check attendance
+<center>
+
 <%= form_for(:location, remote: true) do |f|%>
 	<%= f.hidden_field :location, value: get_user_location%>
-	<%= f.submit "Check my attendance"%>
-		
+	<%=f.submit "Check my attendance", class:"btn btn-default button"%>
+
 <%end%>
+</center>
+<%get_user_ip%>
+<%get_user_location%>
 <%end%>

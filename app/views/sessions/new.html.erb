@@ -1,6 +1,32 @@
-<div class="row">
-	<div class="col-md-6 offset-md-3">
-		<h1>Sign in</h1>
+<style>
+	  .button {
+    padding: 10px 50px;
+    cursor: pointer;
+    text-align: center;
+    color:#fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 9px #999;   
+    width:33%;
+  }
+    .container {
+   padding-bottom: 10px;
+   background-color: white;
+   border-style: outset;
+   width:40%;
+   }
+
+    .bolded {
+    font-size: 34px;
+    font-weight: bold;
+  }
+
+</style>
+<center>
+<div class="row container">
+	<div class="is-centered">
+		<p class="bolded">Sign in</p>
 		<%= form_for(:session, url: login_path) do |f|%>
 		  <div class="form-group">
 				<%= f.text_field :login, placeholder: "username or email", class: "form-control" %>
@@ -8,8 +34,9 @@
 			<div class="form-group">
 				<%= f.password_field :password, placeholder: "password", class: "form-control" %>
 			</div>
-			<%= f.submit "Login", class: "btn btn-primary" %>
+			<%= f.submit "Login", class: "button" %>
 	</div>	
 	<% end %>
 	</div>	
 </div>
+</center>

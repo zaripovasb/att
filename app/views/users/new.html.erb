@@ -1,7 +1,36 @@
+<style>
+
+  .container {
+   padding-bottom: 10px;
+   background-color: white;
+   border-style: outset;
+   width:40%;
+   }
+
+  .button {
+    padding: 10px 45px;
+    cursor: pointer;
+    text-align: center;
+    color:#fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 9px #999;   
+    width:33%;
+  }
+
+  .bolded {
+    font-size: 34px;
+    font-weight: bold;
+  }
+
+</style>
+<center>
+
 <% provide(:title, 'Registration') %>
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-    <h1>Registration</h1>
+<div class="row container">
+  <div class="is-centered">
+      <p class="bolded">Sign up</p>
     <%= form_for @user do |f|%>
       <% if @user.errors.any? %>
         <div class="alert alert-danger"> 
@@ -32,9 +61,10 @@
         <%= f.check_box :is_teacher, class: "form-control"%>
         I am a teacher
       <%end%>
-        
-      <!--<%= f.submit :submit, class: "btn btn-primary" %>-->
-      <%= f.submit "Submit", class: "btn btn-primary" %>
-    <% end %>
+        <div >
+      <!--<%= f.submit :submit, class: "btn btn-default button" %>-->
+      <%= f.submit "Submit", class: "btn btn-default button" %>
+    <% end %><div><br>
   </div>
 </div>
+</center>
