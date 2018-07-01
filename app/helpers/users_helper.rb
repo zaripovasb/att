@@ -4,4 +4,7 @@ module UsersHelper
 		location = Geokit::Geocoders::MultiGeocoder.geocode(remote_ip.to_s)
 		#@user_location = Geokit::LatLng.create(params[:lat], params[:lang])
 	end
+	def get_user_ip
+		remote_ip = request.remote_ip
+	end
 end
