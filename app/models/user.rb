@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
 	has_secure_password
-	
+	acts_as_mappable
 	validates_presence_of :email, :username, :name, :surname
 	validates_uniqueness_of :email, :username
 		validates :password, length: {minimum: 6, maximum: 30}
