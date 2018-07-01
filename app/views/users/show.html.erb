@@ -24,8 +24,8 @@ teacher
 
 <%= form_for(:location, remote: true) do |f|%>
 	<%= f.hidden_field :location, value: get_user_location%>
-	<%=f.submit "Check my attendance", class:"btn btn-default button"%>
-
+	<%= f.submit "Check my attendance", class:"btn btn-default button"%>
+	
 <%end%>
 </center>
 <%get_user_ip%>

@@ -1,0 +1,7 @@
+<%if current_user.is_teacher%>
+teacher
+<%else%>
+<h4> Your presence confirmed</h4>
+<%get_user_ip%>
+<%get_user_location%>
+<%end%>
